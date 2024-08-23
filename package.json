@@ -1,0 +1,32 @@
+{
+	"name": "@ches3/zenhan",
+	"version": "1.0.0",
+	"description": "全角文字・半角文字を変換するライブラリ",
+	"author": "ches3",
+	"license": "MIT",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": ["dist"],
+	"scripts": {
+		"build": "tsup",
+		"test": "vitest",
+		"lint": "biome lint --write ./src",
+		"format": "biome format --write ./src",
+		"check": "biome check --write ./src"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"tsup": "^8.2.4",
+		"typescript": "^5.5.4",
+		"vitest": "^2.0.5"
+	}
+}
